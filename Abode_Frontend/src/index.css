@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* ==========================================================================
+    LIGHT MODE CONFIG (Clean, Corporate, Professional Google Aesthetic)
+     ========================================================================== */
+  --bg-app: #f8f9fa;        /* Soft Google grey background */
+  --bg-card: #ffffff;       /* Sharp white card surface */
+  --text-main: #3c4043;     /* Google body text grey */
+  --text-heading: #202124;  /* Deep dark charcoal for high-contrast headers */
+  --text-muted: #5f6368;    /* Muted secondary text label grey */
+  --border-light: #dadce0;  /* Clean, crisp border line */
+  
+  /* Modern Accent Palette */
+  --accent: #1a73e8;        /* True Google Royal Blue Primary */
+  --accent-hover: #1557b0;  /* Deep interactive hover blue */
+  --ai-purple: #c5a5ff;     /* Retained soft AI indicator */
+  
+  --sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* ==========================================================================
+       DARK MODE CONFIG (Obsidian Deep Finishes)
+       ========================================================================== */
+    --bg-app: #09090b;       /* Pure zinc-950 deep space */
+    --bg-card: #18181b;      /* Slick zinc-900 surface */
+    --text-main: #d1d5db;    /* Soft readable white text */
+    --text-heading: #f9fafb; /* High contrast headers */
+    --text-muted: #9ca3af;   /* Muted grey metadata tracks */
+    --border-light: #27272a; /* Thin zinc-800 board layout dividers */
+    
+    --accent: #3b82f6;       /* Vibrant blue accent glow */
+    --accent-hover: #60a5fa; /* Vibrant hover highlight track */
+  }
+}
+
+/* ==========================================================================
+   GLOBAL LAYOUT LOCKDOWN
+   ========================================================================== */
+html, body {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  width: 100%;
+  background-color: var(--bg-app);
+  color: var(--text-main);
+  font-family: var(--sans);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  overflow-x: hidden;
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* ==========================================================================
+   REACTIVE ENTERPRISE COMPONENTS & DESIGN TOKENS
+   ========================================================================== */
+
+/* Universal Focus States for Form Control inputs across the app */
+input:focus, select:focus, textarea:focus {
+  border-color: var(--accent) !important;
+  box-shadow: 0 0 0 2px rgba(26, 115, 232, 0.15) !important;
+  outline: none !important;
+}
+
+@media (prefers-color-scheme: dark) {
+  input:focus, select:focus, textarea:focus {
+    box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2) !important;
+  }
+}
+
+/* Custom AI Summary UI Feature Box */
+.ai-summary {
+  background: rgba(139, 92, 246, 0.05);
+  border-left: 3px solid var(--ai-purple);
+  padding: 0.85rem 1rem;
+  margin: 0.75rem 0;
+  border-radius: 0 8px 8px 0;
+  font-size: 0.875rem;
+  color: var(--text-main);
+  font-style: italic;
+}
+
+/* Reusable Cyberpunk Glassmorphism Tokens */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid #1e293b;
+}
+
+.cyber-input {
+  width: 100%;
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 12px;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.cyber-input:focus {
+  border-color: #3b82f6;
+  outline: none;
+  box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.15);
+  background: #0f172a;
+}
+
+.cyber-btn {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border-radius: 12px;
+  border: none;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 16px -4px rgba(37, 99, 235, 0.4);
+}
+
+.cyber-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 12px 20px -4px rgba(37, 99, 235, 0.5);
+}
+
+.cyber-btn:active {
+  transform: translateY(0);
+}
