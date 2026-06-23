@@ -58,15 +58,16 @@ Bash
    npm run dev
 Open http://localhost:3000 to view the application in your browser.
 # Key API Endpoints
-  Method	         Endpoint	                      Access	                        Description
-1. POST	      /api/auth/signup	                  Public              	Register a new user account
-2. POST	      /api/auth/login                    	Public	              Authenticate user and receive JWT
-3. GET	      /api/rooms	                        Public	              Fetch all existing sub-communities
-4. POST	      /api/rooms	                        Protected	            Create a new community
-5. GET	      /api/posts	                        Public              	Retrieve a feed of all posts
-6. POST	      /api/posts	                        Protected            	Publish a post to a specific community
-7. POST	      /api/votes	                        Protected	            Cast an upvote or downvote
-8. POST	      /api/comments	                      Protected	            Post a comment under an existing thread
+
+-  Method	 ||        Endpoint	         ||             Access	        ||                Description
+1. POST	   ||   /api/auth/signup	     ||             Public          ||    	Register a new user account
+2. POST	   ||   /api/auth/login        ||            	Public	        ||     Authenticate user and receive JWT
+3. GET	   ||   /api/rooms	           ||             Public	        ||      Fetch all existing sub-communities
+4. POST	   ||   /api/rooms	           ||             Protected	      ||      Create a new community
+5. GET	   ||   /api/posts	           ||             Public          ||    	Retrieve a feed of all posts
+6. POST	   ||   /api/posts	           ||             Protected       ||     	Publish a post to a specific community
+7. POST	   ||   /api/votes	           ||             Protected	      ||      Cast an upvote or downvote
+8. POST	   ||   /api/comments	         ||             Protected	      ||      Post a comment under an existing thread
 
 Screen Shots
 https://github.com/Dee-1234/Abode_FullStackProject/tree/main/ScreenShots
