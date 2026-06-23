@@ -10,18 +10,18 @@ Abode is a full-stack, discussion-based social media application inspired by Red
 1.	Modern Interface: Responsive, clean layout engineered with Next.js and Tailwind CSS.
 2.	State & Auth Persistence: Secure client-side handling of JWT tokens to persist user sessions and gate protected actions (posting, voting, commenting).
 # Tech Stack
-Layer               ||  	      Technology
-1. Frontend         ||    	 Next.js, React, Tailwind CSS, Axios
-2. Backend          ||    	 Java, Spring Boot, Spring Security, Spring Data JPA
-3. Database	        ||       PostgreSQL
-4. Build Tools      ||    	 Maven, npm/yarn
+    Layer               	      Technology
+    Frontend             	 Next.js, React, Tailwind CSS, Axios
+    Backend              	 Java, Spring Boot, Spring Security, Spring Data JPA
+    Database	               PostgreSQL
+    Build Tools          	 Maven, npm/yarn
 # Architecture & Database Design
-The system maps relationship dependencies cleanly to prevent recursive structural loops during payload delivery:
-  [ User ] 1 --------- * [ Post ] * --------- 1 [ Room ]
-     1                      1
-     |                      |
-     *                      *
- [ Vote ]               [ Comment ]
+    The system maps relationship dependencies cleanly to prevent recursive structural loops during payload delivery:
+    [ User ] 1 --------- * [ Post ] * --------- 1 [ Room ]
+       1                      1
+       |                      |
+       *                      *
+   [ Vote ]               [ Comment ]
 # Getting Started
 # Prerequisites
 1.	Java 17 or higher
@@ -59,15 +59,15 @@ Bash
 Open http://localhost:3000 to view the application in your browser.
 # Key API Endpoints
 
--  Method	 ||        Endpoint	         ||             Access	        ||                Description
-1. POST	   ||   /api/auth/signup	     ||             Public          ||    	Register a new user account
-2. POST	   ||   /api/auth/login        ||            	Public	        ||     Authenticate user and receive JWT
-3. GET	   ||   /api/rooms	           ||             Public	        ||      Fetch all existing sub-communities
-4. POST	   ||   /api/rooms	           ||             Protected	      ||      Create a new community
-5. GET	   ||   /api/posts	           ||             Public          ||    	Retrieve a feed of all posts
-6. POST	   ||   /api/posts	           ||             Protected       ||     	Publish a post to a specific community
-7. POST	   ||   /api/votes	           ||             Protected	      ||      Cast an upvote or downvote
-8. POST	   ||   /api/comments	         ||             Protected	      ||      Post a comment under an existing thread
+      Method	   Endpoint	                     Access	             Description
+      POST	     /api/auth/signup	             Public              Register a new user account  
+      POST	     /api/auth/login                 Public	             Authenticate user and receive JWT
+      GET	     /api/rooms	                     Public	             Fetch all existing sub-communities
+      POST	     /api/rooms	                   Protected	         Create a new community
+      GET	     /api/posts	                     Public              Retrieve a feed of all posts
+      POST	     /api/posts	                   Protected             Publish a post to a specific community
+      POST	     /api/votes	                   Protected	         Cast an upvote or downvote
+      POST	     /api/comments	               Protected	         Post a comment under an existing thread
 
 Screen Shots
 https://github.com/Dee-1234/Abode_FullStackProject/tree/main/ScreenShots
